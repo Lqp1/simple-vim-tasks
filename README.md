@@ -9,7 +9,7 @@ The following keys are defined in normal mode, on each of the tasks:
 * c : Remove the state from this entry
 * w : Change state to "Work in progress"
 * p : Change state to "Pending"
-* W : Save to buffer
+* W : Save to file
 * q : Exit this buffer, without saving
 * n : add entry
 * e : edit entry
@@ -24,6 +24,7 @@ Use the following to load `~/.local.vt`:
 ## File format
 Tasks are stored in plaintext, following this format:
 > State Description
+
 Where:
 * **State** : an optional integer describing the state of the entry
 * **Description** : is the text of the entry.
