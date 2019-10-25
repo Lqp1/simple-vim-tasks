@@ -11,7 +11,7 @@ function! VimTasks#BrowseOpenTasks()
 endfunction
 
 function! VimTasks#EnsureTasksList(name)
-    if ! filereadable(a:name)
+    if ! filereadable(expand(a:name))
         call writefile([], expand(a:name))
     end
     call VimTasks#OpenTasks(a:name)
@@ -41,7 +41,7 @@ function! VimTasks#SaveTasks()
             end
         end
     endfor
-    call writefile(l:filecontent, l:file)
+    call writefile(l:filecontent, expand(l:file))
 endfunction
 
 function! VimTasks#OpenTasks(afile)
